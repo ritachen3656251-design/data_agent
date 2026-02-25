@@ -4,10 +4,9 @@
 
 ## 功能概览
 
-- **描述型**：单日/多日核心指标（UV、PV、买家数）、漏斗转化率、留存、日活
-- **诊断型**：为什么转化/UV/买家下降？支持两日对比（如「12月1日到2日」）
-- **归因型**：哪些类目导致买家变化、拖累/拉动
-- **新老转化**：新老用户转化差异
+- 描述型：单日/多日核心指标（UV、PV、买家数）、漏斗转化率、留存、日活
+- 诊断型：为什么转化/UV/买家下降？支持两日对比（如「12月1日到2日」）
+- 归因型：哪些类目导致买家变化、拖累/拉动
 
 ## 架构
 
@@ -21,10 +20,10 @@
          Narrator(LLM) → 自然语言回答
 ```
 
-- **Mapper**：意图识别、日期/天数抽取，LLM 失败时规则回退
-- **Planner**：根据 slots 生成执行计划，优先 LLM，规则层做安全校验
-- **Tools**：PostgreSQL 查询（daily_metrics、类目贡献等）
-- **Narrator**：将 answer_obj 转为可读文本，诊断类输出因果分析
+- Mapper：意图识别、日期/天数抽取，LLM 失败时规则回退
+- Planner：根据 slots 生成执行计划，优先 LLM，规则层做安全校验
+- Tools：PostgreSQL 查询（daily_metrics、类目贡献等）
+- Narrator：将 answer_obj 转为可读文本，诊断类输出因果分析
 
 ## 项目结构
 
@@ -92,6 +91,10 @@ python -m evals.run_all_regression
 # 数据库检查
 python scripts/inspect_db.py
 ```
+
+## 数据
+
+`data/UserBehavior.csv` 因体积过大（约 3.5GB）未纳入仓库。若需本地运行，请将数据文件放入 `data/` 目录。
 
 ## 依赖
 
