@@ -1,0 +1,192 @@
+{
+  "failures": [
+    {
+      "type": "上下文保持失败",
+      "id": "MT02",
+      "name": "趋势→原因",
+      "input": [
+        "最近9天核心指标趋势",
+        "怎么回事"
+      ],
+      "expected": "T2 assumptions contains '沿用上一轮 days=' => False",
+      "actual": [
+        {
+          "slots": {
+            "intent": "overview_daily",
+            "dt": null,
+            "days": 9,
+            "assumptions": [],
+            "not_supported": null
+          },
+          "plan": {
+            "calls": [
+              {
+                "tool_key": "overview_daily",
+                "params": {
+                  "days": 9
+                }
+              }
+            ]
+          }
+        },
+        {
+          "slots": {
+            "intent": "diagnose_generic",
+            "dt": null,
+            "days": 9,
+            "assumptions": [
+              "dt 缺失，days 默认 9 供 funnel 诊断",
+              "未指定诊断对象，默认 metric_focus=uv_to_buyer"
+            ],
+            "not_supported": null,
+            "metric_focus": "uv_to_buyer"
+          },
+          "plan": {
+            "calls": [
+              {
+                "tool_key": "overview_day",
+                "params": {
+                  "dt": "2017-12-03"
+                }
+              },
+              {
+                "tool_key": "funnel_daily",
+                "params": {
+                  "days": 9
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "上下文保持失败",
+      "id": "MT04",
+      "name": "漏斗→诊断",
+      "input": [
+        "最近7天漏斗表现",
+        "转化率下降原因"
+      ],
+      "expected": "T2 days expected 7, got 9",
+      "actual": [
+        {
+          "slots": {
+            "intent": "funnel_daily",
+            "dt": null,
+            "days": 7,
+            "assumptions": [],
+            "not_supported": null
+          },
+          "plan": {
+            "calls": [
+              {
+                "tool_key": "funnel_daily",
+                "params": {
+                  "days": 7
+                }
+              }
+            ]
+          }
+        },
+        {
+          "slots": {
+            "intent": "diagnose_generic",
+            "dt": null,
+            "days": 9,
+            "assumptions": [
+              "dt 缺失，days 默认 9 供 funnel 诊断"
+            ],
+            "not_supported": null
+          },
+          "plan": {
+            "calls": [
+              {
+                "tool_key": "overview_day",
+                "params": {
+                  "dt": "2017-12-03"
+                }
+              },
+              {
+                "tool_key": "funnel_daily",
+                "params": {
+                  "days": 9
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "对话偏差失败",
+      "id": "MT04",
+      "name": "漏斗→诊断",
+      "input": [
+        "最近7天漏斗表现",
+        "转化率下降原因"
+      ],
+      "expected": "days inconsistent: [(1, 7), (2, 9)]",
+      "actual": [
+        "days inconsistent: [(1, 7), (2, 9)]"
+      ]
+    },
+    {
+      "type": "上下文保持失败",
+      "id": "MT09",
+      "name": "指代不消失-那天",
+      "input": [
+        "12月3日核心指标",
+        "那天转化率怎么样"
+      ],
+      "expected": "T2 dt expected 2017-12-03, got 2017-12-04",
+      "actual": [
+        {
+          "slots": {
+            "intent": "overview_day",
+            "dt": "2017-12-03",
+            "days": null,
+            "assumptions": [
+              "日期无年份，默认 2017 年"
+            ],
+            "not_supported": null
+          },
+          "plan": {
+            "calls": [
+              {
+                "tool_key": "overview_day",
+                "params": {
+                  "dt": "2017-12-03"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "slots": {
+            "intent": "funnel_daily",
+            "dt": "2017-12-04",
+            "days": null,
+            "assumptions": [],
+            "not_supported": null
+          },
+          "plan": {
+            "calls": [
+              {
+                "tool_key": "funnel_daily",
+                "params": {
+                  "days": 1,
+                  "end_dt": "2017-12-04"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "context_fail": 3,
+    "drift_fail": 1
+  }
+}

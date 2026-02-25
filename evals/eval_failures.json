@@ -1,0 +1,232 @@
+{
+  "failures": [
+    {
+      "type": "意图识别失败",
+      "id": "E17",
+      "question": "12月3日有异常吗",
+      "expected": {
+        "intent": "overview_day"
+      },
+      "actual": {
+        "intent": "unknown",
+        "slots": {
+          "intent": "unknown",
+          "dt": "2017-12-03",
+          "days": null,
+          "assumptions": [
+            "日期无年份，默认 2017 年"
+          ],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "模板命中失败",
+      "id": "E17",
+      "question": "12月3日有异常吗",
+      "expected": {
+        "tool_keys": [
+          "overview_day"
+        ],
+        "calls_contain": null
+      },
+      "actual": {
+        "calls": [],
+        "plan": {
+          "calls": [],
+          "plots": [],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "参数抽取失败",
+      "id": "E17",
+      "question": "12月3日有异常吗",
+      "expected": {
+        "dt": "2017-12-03"
+      },
+      "actual": {
+        "dt": null,
+        "slots_dt": "2017-12-03"
+      }
+    },
+    {
+      "type": "意图识别失败",
+      "id": "E20",
+      "question": "最近转化率异常分析",
+      "expected": {
+        "intent": "diagnose_generic"
+      },
+      "actual": {
+        "intent": "funnel_daily",
+        "slots": {
+          "intent": "funnel_daily",
+          "dt": null,
+          "days": null,
+          "assumptions": [],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "模板命中失败",
+      "id": "E20",
+      "question": "最近转化率异常分析",
+      "expected": {
+        "tool_keys": [
+          "overview_day",
+          "funnel_daily"
+        ],
+        "calls_contain": [
+          "overview_day",
+          "funnel_daily"
+        ]
+      },
+      "actual": {
+        "calls": [
+          "funnel_daily"
+        ],
+        "plan": {
+          "calls": [
+            {
+              "tool_key": "funnel_daily",
+              "params": {
+                "days": 9
+              }
+            }
+          ],
+          "plots": [
+            {
+              "plot_type": "trend",
+              "from_call": "0",
+              "config": {
+                "x": "dt",
+                "ys": [
+                  "uv_to_buyer",
+                  "uv_to_cart",
+                  "cart_to_buyer"
+                ],
+                "title": "Funnel trend"
+              }
+            }
+          ],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "参数抽取失败",
+      "id": "E20",
+      "question": "最近转化率异常分析",
+      "expected": {
+        "dt": "exists"
+      },
+      "actual": {
+        "dt": null,
+        "slots_dt": null
+      }
+    },
+    {
+      "type": "意图识别失败",
+      "id": "B06",
+      "question": "看看",
+      "expected": {
+        "intent": "overview_daily"
+      },
+      "actual": {
+        "intent": "unknown",
+        "slots": {
+          "intent": "unknown",
+          "dt": null,
+          "days": null,
+          "assumptions": [],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "模板命中失败",
+      "id": "B06",
+      "question": "看看",
+      "expected": {
+        "tool_keys": [
+          "overview_daily"
+        ],
+        "calls_contain": null
+      },
+      "actual": {
+        "calls": [],
+        "plan": {
+          "calls": [],
+          "plots": [],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "图表断言失败",
+      "id": "B06",
+      "question": "看看",
+      "expected": {
+        "plot_rule": "需 trend 图但 plan.plots 无 trend"
+      },
+      "actual": {
+        "plan": {
+          "calls": [],
+          "plots": [],
+          "not_supported": null
+        },
+        "msg": "需 trend 图但 plan.plots 无 trend"
+      },
+      "_detail": "  question: 看看\n  plan.calls: []\n  plan.plots: []\n  results: N/A (tools 未执行)"
+    },
+    {
+      "type": "边界处理失败",
+      "id": "B06",
+      "question": "看看",
+      "expected": {
+        "intent": "overview_daily",
+        "note": "极短模糊"
+      },
+      "actual": {
+        "intent": "unknown",
+        "plan": {
+          "calls": [],
+          "plots": [],
+          "not_supported": null
+        }
+      }
+    },
+    {
+      "type": "边界处理失败",
+      "id": "B10",
+      "question": "新老转化",
+      "expected": {
+        "intent": "new_vs_old_user_conversion",
+        "note": "无日期新老，用默认 dt"
+      },
+      "actual": {
+        "intent": "unknown",
+        "plan": {
+          "calls": [],
+          "plots": [],
+          "not_supported": {
+            "metric": "新老用户转化率",
+            "reason": "暂时无法查询",
+            "suggestion": "可查核心指标、漏斗转化"
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "intent_fail": 3,
+    "param_fail": 2,
+    "template_fail": 3,
+    "plot_fail": 1,
+    "boundary_fail": 2,
+    "not_supported_fail": 0,
+    "hallucination_count": 0
+  }
+}

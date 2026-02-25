@@ -1,0 +1,11 @@
+# 数据与 SQL
+pandas>=1.5.0
+matplotlib>=3.5.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Qwen-Max 接入（DashScope）
+dashscope>=1.14.0
+
+# 可选：从 .env 加载 API Key
+python-dotenv>=1.0.0

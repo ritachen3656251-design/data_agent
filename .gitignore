@@ -1,0 +1,15 @@
+# 环境与密钥
+.env
+
+# 本地存储
+memory.db
+
+# 大文件（GitHub 单文件限制 100MB）
+data/UserBehavior.csv
+*.pyc
+__pycache__/
+
+# 虚拟环境
+venv/
+.venv/
+env/

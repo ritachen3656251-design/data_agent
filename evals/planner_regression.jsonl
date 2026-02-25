@@ -1,0 +1,74 @@
+{"id":"P001","question":"2017-12-03 核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P002","question":"2017-12-02 核心指标如何？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-02"}]}
+{"id":"P003","question":"12-03 核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P004","question":"12.3 核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P005","question":"12月3日 数据怎么样","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P006","question":"昨天的核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P007","question":"前天核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P008","question":"12-02 指标如何","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-02"}]}
+{"id":"P009","question":"12/3 核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P010","question":"12月3号 核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+
+{"id":"P011","question":"最近9天核心指标趋势？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":9}]}
+{"id":"P012","question":"最近7天趋势","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P013","question":"最近一周的UV和买家趋势","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P014","question":"过去14天核心指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":14}]}
+{"id":"P015","question":"核心指标趋势","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P016","question":"近7天数据趋势","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P017","question":"最近30天怎么样","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":30}]}
+{"id":"P018","question":"最近1周指标","expect":[{"path":"calls[0].tool_key","op":"eq","value":"overview_daily"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+
+{"id":"P019","question":"最近漏斗情况？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P020","question":"最近9天漏斗表现","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"eq","value":9}]}
+{"id":"P021","question":"最近9天UV到购买转化怎么样？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P022","question":"加购到购买转化率","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P023","question":"转化链最近7天","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P024","question":"漏斗转化","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P025","question":"最近14天漏斗","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"eq","value":14}]}
+{"id":"P026","question":"一周漏斗数据","expect":[{"path":"calls[0].tool_key","op":"eq","value":"funnel_daily"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+
+{"id":"P027","question":"12月3日哪些类目导致买家下降？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P028","question":"12月3日 哪些类目拉动增长？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P029","question":"12月3日类目贡献Top5","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P030","question":"类目贡献","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P031","question":"2017-12-02 类目拖累","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-02"}]}
+{"id":"P032","question":"昨天类目贡献","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P033","question":"哪些类目导致下降","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P034","question":"12.3 类目拉动","expect":[{"path":"calls[0].tool_key","op":"eq","value":"category_contrib_buyers"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+
+{"id":"P035","question":"最近留存怎么样？","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_retention"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P036","question":"最近7天留存","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_retention"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P037","question":"次留率","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_retention"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P038","question":"留存数据","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_retention"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P039","question":"过去14天留存","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_retention"},{"path":"calls[0].params.days","op":"eq","value":14}]}
+{"id":"P040","question":"最近9天留存","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_retention"},{"path":"calls[0].params.days","op":"eq","value":9}]}
+
+{"id":"P041","question":"最近7天日活","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_activity"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P042","question":"DAU如何","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_activity"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P043","question":"日活数据","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_activity"},{"path":"calls[0].params.days","op":"exists"}]}
+{"id":"P044","question":"最近一周DAU","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_activity"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P045","question":"近7天日活","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_activity"},{"path":"calls[0].params.days","op":"eq","value":7}]}
+{"id":"P046","question":"过去9天DAU","expect":[{"path":"calls[0].tool_key","op":"eq","value":"user_activity"},{"path":"calls[0].params.days","op":"eq","value":9}]}
+
+{"id":"P047","question":"12月2日新老用户转化","expect":[{"path":"calls[0].tool_key","op":"eq","value":"new_vs_old_user_conversion"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-02"}]}
+{"id":"P048","question":"12月3日 新老转化","expect":[{"path":"calls[0].tool_key","op":"eq","value":"new_vs_old_user_conversion"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+{"id":"P049","question":"新老用户转化率","expect":[{"path":"calls[0].tool_key","op":"eq","value":"new_vs_old_user_conversion"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P050","question":"昨天新用户转化","expect":[{"path":"calls[0].tool_key","op":"eq","value":"new_vs_old_user_conversion"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P051","question":"新老用户转化差异","expect":[{"path":"calls[0].tool_key","op":"eq","value":"new_vs_old_user_conversion"},{"path":"calls[0].params.dt","op":"exists"}]}
+{"id":"P052","question":"2017-12-03 新老转化差异","expect":[{"path":"calls[0].tool_key","op":"eq","value":"new_vs_old_user_conversion"},{"path":"calls[0].params.dt","op":"eq","value":"2017-12-03"}]}
+
+{"id":"P053","question":"GMV多少？","expect":[{"path":"not_supported","op":"exists"},{"path":"calls","op":"eq","value":[]}]}
+{"id":"P054","question":"客单价是多少？","expect":[{"path":"not_supported","op":"exists"},{"path":"calls","op":"eq","value":[]}]}
+{"id":"P055","question":"成交额","expect":[{"path":"not_supported","op":"exists"}]}
+{"id":"P056","question":"ROI多少","expect":[{"path":"not_supported","op":"exists"}]}
+{"id":"P057","question":"订单数","expect":[{"path":"not_supported","op":"exists"}]}
+{"id":"P058","question":"销售额多少","expect":[{"path":"not_supported","op":"exists"}]}
+{"id":"P059","question":"客单价ARPU","expect":[{"path":"not_supported","op":"exists"}]}
+{"id":"P060","question":"交易额多少","expect":[{"path":"not_supported","op":"exists"}]}
+
+{"id":"P061","question":"为什么12月3日转化下降？","expect":[{"path":"calls","op":"len_gte","value":2},{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[1].tool_key","op":"eq","value":"funnel_daily"}]}
+{"id":"P062","question":"12月3日为什么下降","expect":[{"path":"calls","op":"len_gte","value":2},{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[1].tool_key","op":"eq","value":"funnel_daily"}]}
+{"id":"P063","question":"转化率下降原因","expect":[{"path":"calls","op":"len_gte","value":2},{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[1].tool_key","op":"eq","value":"funnel_daily"}]}
+{"id":"P064","question":"昨天买家下降为什么","expect":[{"path":"calls","op":"len_gte","value":2},{"path":"calls[0].tool_key","op":"eq","value":"overview_day"},{"path":"calls[1].tool_key","op":"eq","value":"funnel_daily"}]}
+{"id":"P065","question":"下降原因分析","expect":[{"path":"calls","op":"len_gte","value":2},{"path":"calls[0].tool_key","op":"eq","value":"overview_day"}]}
+{"id":"P066","question":"为什么UV掉了","expect":[{"path":"calls","op":"len_gte","value":2},{"path":"calls[0].tool_key","op":"eq","value":"overview_day"}]}
